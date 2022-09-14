@@ -1,4 +1,5 @@
 import React from "react";
+import GlobalChart from "./components/GlobalChart";
 import HeaderInfos from "./components/HeaderInfos";
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div className="app-container">
       <header>
         <HeaderInfos />
+        <GlobalChart />
       </header>
     </div>
   );
