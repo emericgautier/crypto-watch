@@ -109,6 +109,44 @@ const Table = ({ coinsData }) => {
                 return b.ath_change_percentage - a.ath_change_percentage;
               case "MarketCapreverse":
                 return a.market_cap - b.market_cap;
+              case "Prixreverse":
+                return a.current_price - b.current_price;
+              case "Volumereverse":
+                return a.total_volume - b.total_volume;
+              case "MarketCapreverse":
+                return a.market_cap - b.market_cap;
+              case "1hreverse":
+                return (
+                  a.price_change_percentage_1h_in_currency -
+                  b.price_change_percentage_1h_in_currency
+                );
+              case "1jreverse":
+                return (
+                  a.market_cap_change_percentage_24h -
+                  b.market_cap_change_percentage_24h
+                );
+              case "1sreverse":
+                return (
+                  a.price_change_percentage_7d_in_currency -
+                  b.price_change_percentage_7d_in_currency
+                );
+              case "1mreverse":
+                return (
+                  a.price_change_percentage_30d_in_currency -
+                  b.price_change_percentage_30d_in_currency
+                );
+              case "6mreverse":
+                return (
+                  a.price_change_percentage_200d_in_currency -
+                  b.price_change_percentage_200d_in_currency
+                );
+              case "1areverse":
+                return (
+                  a.price_change_percentage_1y_in_currency -
+                  b.price_change_percentage_1y_in_currency
+                );
+              case "ATHreverse":
+                return a.ath_change_percentage - b.ath_change_percentage;
             }
           })
           .map((coin, index) => (
